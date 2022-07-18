@@ -1,30 +1,34 @@
 {
 	"packages": [
 		{
-			"name": "Microchip",
-			"maintainer": "ASU Capstone Team 25",
-			"websiteURL": "https://github.com/Emsloan/Microchip-DA48",
+			"name": "Microchip AVR Dx Boards",
+			"maintainer": "Microchip",
+			"websiteURL": "https://github.com/bobcmartin/Microchip-Boards",
 			"email": "emsloan@asu.edu",
 			"help": {
-				"online": "https://github.com/Emsloan/Microchip-DA48"
+				"online": "https://github.com/bobcmartin/Microchip-Boards"
 			},
 			"platforms": [
 				{
-					"name": "Team 25 core",
+					"name": "AVR Ex/Dx boards",
 					"architecture": "megaavr",
-					"version": "1.0.1",
+					"version": "0.0.1",
 					"category": "Contributed",
-					"url": "https://github.com/Emsloan/Microchip-DA48/archive/refs/heads/master.zip",
-					"archiveFileName": "Microchip-DA48-master.zip",
+					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/heads/master.zip",
+					"archiveFileName": "Microchip-Boards-master.zip",
 					"checksum": "SHA-256:7f024fc5f628febcd4552d0b76ce3d670a04cd6a032b77d4e01ed8d8eb2a5228",
 					"size": "133000",
 					"boards": [
 						{
-							"name": "AVR128DA48"
+							"name": "AVR128DA48 Curiosity Nano"
 						},
 						{
-							"name": "AVR128DB48"
+							"name": "AVR128DB48 Curiosity Nano"
+						},
+						{
+							"name": "AVR64DD32 Curiosity Nano"
 						}
+						
 					],
 					"toolsDependencies": [
 						{
