@@ -10,7 +10,7 @@
 			},
 			"platforms": [
 				{
-					"name": "AVR Ex/Dx boards",
+					"name": "AVR Curiosity Nano boards",
 					"architecture": "megaavr",
 					"version": "0.0.1",
 					"category": "Contributed",
