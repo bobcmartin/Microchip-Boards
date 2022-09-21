@@ -1,7 +1,7 @@
 {
 	"packages": [
 		{
-			"name": "Microchip AVR Dx/Ex Boards",
+			"name": "Microchip",
 			"maintainer": "Microchip",
 			"websiteURL": "https://github.com/bobcmartin/Microchip-Boards",
 			"email": "bob.martin@microchip.com",
