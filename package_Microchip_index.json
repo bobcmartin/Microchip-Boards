@@ -12,7 +12,7 @@
 				{
 					"name": "AVR Curiosity Nano boards",
 					"architecture": "megaavr",
-					"version": "1.0.5",
+					"version": "1.0.6",
 					"category": "Contributed",
 					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/heads/main.zip",
 					"archiveFileName": "Microchip-Boards-main.zip",
