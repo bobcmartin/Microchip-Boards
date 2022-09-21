@@ -16,7 +16,7 @@
 					"category": "Contributed",
 					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/heads/main.zip",
 					"archiveFileName": "Microchip-Boards-main.zip",
-					"checksum": "D8FC199FF868E2FF833BD6E3685407141A37FB7874434DA4BBFA7B6F1FA081B5",
+					"checksum": "SHA-256:D8FC199FF868E2FF833BD6E3685407141A37FB7874434DA4BBFA7B6F1FA081B5",
 					"size":"1532854",
 					"boards": [
 						{
