@@ -14,9 +14,9 @@
 					"architecture": "megaavr",
 					"version": "0.5",
 					"category": "Contributed",
-					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/tags/v0.50.zip",
-					"archiveFileName": "Microchip-Boards-0.50.zip",
-					"checksum": "F003C62E9474DBD73F7358F819C1988139D9C725DE3479382086A7B3C34C1BB3",
+					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/heads/master.zip",
+					"archiveFileName": "Microchip-Boards-main.zip",
+					"checksum": "D8FC199FF868E2FF833BD6E3685407141A37FB7874434DA4BBFA7B6F1FA081B5",
 					"size":"1,534,086",
 					"boards": [
 						{
