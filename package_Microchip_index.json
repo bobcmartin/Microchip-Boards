@@ -17,7 +17,7 @@
 					"url": "https://github.com/bobcmartin/Microchip-Boards/archive/refs/heads/master.zip",
 					"archiveFileName": "Microchip-Boards-main.zip",
 					"checksum": "D8FC199FF868E2FF833BD6E3685407141A37FB7874434DA4BBFA7B6F1FA081B5",
-					"size":"1,534,086",
+					"size":"1532854",
 					"boards": [
 						{
 							"name": "AVR128DA48 Curiosity Nano"
