@@ -4,6 +4,7 @@ menu.chip=Chip
 
 avrda.name=AVR128DA48 Curiosity Nano
 avrdb.name=AVR128DB48 Curiosity Nano
+avrdd.name=AVR64DD32 Curiosity Nano
 
 #############################
 # Default settings AVR-DA48 #
@@ -147,6 +148,8 @@ avrdb.bootloader.BOOTSIZE=0x00
 ############################
 menu.extras=Options
 
+# 128DA48 options
+
 ##### 1x Wire, No Float #####
 avrda.menu.extras.extra1=1 Wire, Printf float none
 avrda.menu.extras.extra1.build.wire.mode=MORS_SINGLE
@@ -227,3 +230,98 @@ avrdb.menu.extras.extra6.build.printf=-Wl,-u,vfprintf -lprintf_flt
 avrdb.menu.extras.extra6.build.printfabr=.pfF
 
 
+##### 64DD32 extra options menu setup #####
+
+##### 1x Wire, No Float #####
+avrdd.menu.extras.extra1=1 Wire, Printf float none
+avrdd.menu.extras.extra1.build.wire.mode=MORS_SINGLE
+avrdd.menu.extras.extra1.build.wireabr=.wO
+
+##### 2x Wire, No Float #####
+avrdd.menu.extras.extra2=2 Wire, Printf float none
+avrdd.menu.extras.extra2.build.wire.mode=MORS_BOTH
+avrdd.menu.extras.extra2.build.wireabr=.wO2
+
+##### 1x Wire, Minimal Float #####
+avrdd.menu.extras.extra3=1 Wire, Printf float min
+avrdd.menu.extras.extra3.build.wire.mode=MORS_SINGLE
+avrdd.menu.extras.extra3.build.wireabr=.wO
+avrdd.menu.extras.extra3.build.printf=-Wl,-u,vfprintf -lprintf_min
+avrdd.menu.extras.extra3.build.printfabr=.pfM
+
+##### 2x Wire, Minimal Float #####
+avrdd.menu.extras.extra4=2 Wire, Printf float min
+avrdd.menu.extras.extra4.build.wire.mode=MORS_BOTH
+avrdd.menu.extras.extra4.build.wireabr=.wO2
+avrdd.menu.extras.extra4.build.printf=-Wl,-u,vfprintf -lprintf_min
+avrdd.menu.extras.extra4.build.printfabr=.pfM
+
+##### 1x Wire, Full Float #####
+avrdd.menu.extras.extra5=1x Wire, Printf float full
+avrdd.menu.extras.extra5.build.wire.mode=MORS_SINGLE
+avrdd.menu.extras.extra5.build.wireabr=.wO
+avrdd.menu.extras.extra5.build.printf=-Wl,-u,vfprintf -lprintf_flt
+avrdd.menu.extras.extra5.build.printfabr=.pfF
+
+##### 2x Wire, Full Float #####
+avrdd.menu.extras.extra6=2x Wire, Printf float full 
+avrdd.menu.extras.extra6.build.wire.mode=MORS_BOTH
+avrdd.menu.extras.extra6.build.wireabr=.wO2
+avrdd.menu.extras.extra6.build.printf=-Wl,-u,vfprintf -lprintf_flt
+avrdd.menu.extras.extra6.build.printfabr=.pfF
+
+# -------- AVR DD ----------------#
+
+avrdd.build.board=avrdd
+avrdd.build.MVIOenable=-DMVIO_ENABLED
+avrdd.build.core=dxcore
+avrdb.build.speed=24
+avrdb.build.clocksource=0
+avrdd.build.f_cpu=24000000L
+avrdd.build.text_section_start=.text=0x200
+avrdd.build.extra_flags= -DSERIAL_PORT_BOOT={bootloader.portname} -DSERIAL_PORT_BOOT_PORTMUX={bootloader.portswap} -DUSING_OPTIBOOT {build.mvioenable>}
+avrdd.build.export_merged_output=false
+avrdd.build.highestcb=B2
+
+
+#----------------------------------------#
+# Bootloading parameters and fuses       #
+#________________________________________#
+avrdd.bootloader.tool=avrdude
+avrdd.bootloader.file={runtime.platform.path}/bootloaders/hex/{bootloader.class}{bootloader.port}{bootloader.timeout}.hex
+avrdd.bootloader.WDTCFG=0x00
+avrdd.bootloader.BODCFG=0b{bootloader.bodlevbits}{bootloader.bodmodebits}
+avrdd.bootloader.SYSCFG0=0b110{bootloader.resetpinbits}000
+avrdd.bootloader.SYSCFG1=0b000{bootloader.mviobits}{bootloader.sutbits}
+avrdd.bootloader.SYSCFG1=0b00001{bootloader.sutbits}
+avrdd.bootloader.CODESIZE=0x00
+avrdd.bootloader.BOOTSIZE=0x01
+avrdd.bootloader.avrdudestring=-Uflash:w:{bootloader.file}:i
+avrdd.bootloader.pymcuprogstring=-f{bootloader.file} -a write
+
+#----------------------------------------#
+# Upload parameters for Optiboot         #
+#________________________________________#
+avrdd.upload.tool=avrdude
+avrdd.upload.protocol=arduino
+avrdd.upload.extra_params=-D
+avrdd.upload.speed=115200
+avrdd.upload.prog_interlock="ERROR: Upload using programmer is not supported on optiboot boards"
+
+#----------------------------------------#
+# Exported hex/lst/map names will        #
+# indicate selected options. These       #
+# are only to do that, nothing else      #
+#________________________________________#
+#avrddopti.build.mcupostfix=opti
+#avrddopti.build.printfabr=
+#avrddopti.build.attachabr=
+#avrddopti.build.wireabr=
+#avrddopti.build.appspmabr=
+
+#avrddopti.menu.chip.avr64dd32=AVR64DD32
+#avrddopti.menu.chip.avr64dd32.build.mcu=avr64dd32
+#avrddopti.menu.chip.avr64dd32.bootloader.class=optiboot_dd64
+#avrddopti.menu.chip.avr64dd32.upload.maximum_size=65024
+#avrddopti.menu.chip.avr64dd32.upload.maximum_data_size=8192
+#avrddopti.menu.chip.avr64dd32.build.variant=32in-ddseries
