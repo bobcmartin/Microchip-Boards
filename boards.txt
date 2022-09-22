@@ -46,7 +46,7 @@ avrda.menu.chip.128DA48.build.variant=48pin-standard
 # Clock Speed + Source options
 avrda.build.f_cpu=24000000L
 avrda.build.speed=24
-
+avrda.build.clocksource=0
 # BrownOut Detection (BOD) Options
 avrda.bootloader.bodlevbits=000
 
@@ -120,7 +120,6 @@ avrdb.build.clocksource=0
 # BrownOut Detection (BOD) Options
 avrdb.bootloader.bodlevbits=000
 
-
 # Retain EEPROM (EESAVE)                 
 avrdb.bootloader.eesavebit=1
 
@@ -130,10 +129,8 @@ avrdb.bootloader.resetpinbits=10
 # attachInterrupt Mode                   
 avrdb.build.attachmode=-DCORE_ATTACH_ALL
 
-
 # MVIO menu                              
 avrdb.bootloader.mviobits=01
-
 
 # Startup time options  
 # Default set to 8 ms                 
@@ -148,7 +145,7 @@ avrdb.bootloader.BOOTSIZE=0x00
 ############################
 menu.extras=Options
 
-# 128DA48 options
+# ----- 128DA48 options -------------#
 
 ##### 1x Wire, No Float #####
 avrda.menu.extras.extra1=1 Wire, Printf float none
@@ -319,9 +316,9 @@ avrdd.upload.prog_interlock="ERROR: Upload using programmer is not supported on 
 #avrddopti.build.wireabr=
 #avrddopti.build.appspmabr=
 
-#avrddopti.menu.chip.avr64dd32=AVR64DD32
-#avrddopti.menu.chip.avr64dd32.build.mcu=avr64dd32
-#avrddopti.menu.chip.avr64dd32.bootloader.class=optiboot_dd64
-#avrddopti.menu.chip.avr64dd32.upload.maximum_size=65024
-#avrddopti.menu.chip.avr64dd32.upload.maximum_data_size=8192
-#avrddopti.menu.chip.avr64dd32.build.variant=32pin-ddseries
+avrdd.menu.chip.avr64dd32=AVR64DD32
+avrdd.menu.chip.avr64dd32.build.mcu=avr64dd32
+avrdd.menu.chip.avr64dd32.bootloader.class=optiboot_dd64
+avrdd.menu.chip.avr64dd32.upload.maximum_size=65024
+avrdd.menu.chip.avr64dd32.upload.maximum_data_size=8192
+avrdd.menu.chip.avr64dd32.build.variant=32pin-ddseries
