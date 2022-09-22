@@ -324,4 +324,4 @@ avrdd.upload.prog_interlock="ERROR: Upload using programmer is not supported on 
 #avrddopti.menu.chip.avr64dd32.bootloader.class=optiboot_dd64
 #avrddopti.menu.chip.avr64dd32.upload.maximum_size=65024
 #avrddopti.menu.chip.avr64dd32.upload.maximum_data_size=8192
-#avrddopti.menu.chip.avr64dd32.build.variant=32in-ddseries
+#avrddopti.menu.chip.avr64dd32.build.variant=32pin-ddseries
